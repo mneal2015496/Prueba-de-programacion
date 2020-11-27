@@ -1,0 +1,45 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each vehicle}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{brand}}
+                    </h3>
+                    <p class="m-2">
+                        {{model}}
+                    </p>
+                    <p class="m-2">
+                        {{year}}
+                    </p>
+                    <p class="m-2">
+                        {{licensePlate}}
+                    </p>
+                    <p class="m-2">
+                        {{state}}
+                    </p>
+                    <p>
+                        {{timeago created_at}}
+                    </p>
+                    <a href="/vehicles/deleted/{{id}}" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                    <a href="/vehicles/edit/{{id}}" class="btn btn-secondary">
+                        Editar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay registros de vehiculos.</p>
+                <a href="/vehicles/add">Crea Uno!</a>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</div>

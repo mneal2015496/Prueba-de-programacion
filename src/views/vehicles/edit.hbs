@@ -1,0 +1,62 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/vehicles/edit/{{vehicle.id}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{vehicle.brand}}" class="form-control" name="brand"
+                                placeholder="Marca" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{vehicle.model}}" class="form-control" name="model"
+                                placeholder="Modelo">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{vehicle.year}}" class="form-control" name="year"
+                                placeholder="Año">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{vehicle.licensePlate}}" class="form-control" name="licensePlate"
+                                placeholder="Placa">
+                        </div>
+                        <div class="form-group">
+                            <p>Estado Actual: {{vehicle.state}}</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="state1" value="Perfecto">
+                                <label class="form-check-label" for="state1">Perfecto</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="state2"
+                                    value="Daño menor">
+                                <label class="form-check-label" for="state2">Daño menor</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="state3"
+                                    value="Reparación urgente">
+                                <label class="form-check-label" for="state3">Reparación urgente</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="state4"
+                                    value="En reparación">
+                                <label class="form-check-label" for="state4">En reparación</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="state" id="state5" value="Descarte">
+                                <label class="form-check-label" for="state5">Descarte</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                            <a href="/vehicles" class="btn btn-danger btn-block">
+                                Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
